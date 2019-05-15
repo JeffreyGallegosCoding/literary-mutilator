@@ -16,6 +16,16 @@ document.getElementById('changeColorText').addEventListener ('click', function (
 			//document.getElementById("changeTextFont").src = "./js-assignment.js";
 		}
 	);
+
+	//Shuffle words function
+	string.prototype.shuffle = function() {
+		var a = this.split(""),
+			n = a.length;
+
+		for(var i = n; i > 0; i--) {
+			var j = Math.floor(Math.random() * (i + 1));
+		}
+	}
 };
 
 
