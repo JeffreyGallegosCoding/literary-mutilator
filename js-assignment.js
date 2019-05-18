@@ -1,5 +1,5 @@
 
-window.onload = function() {
+function messWithWordColor() {
 
 
 	console.log("Hello World");
@@ -10,20 +10,25 @@ window.onload = function() {
 			//document.getElementById("changeColorText").src = "./js-assignment.js";
 		}
 	);
+}
+
+function messWithWordFont() {
 
 //Change the text font function
 	document.getElementById('changeTextFont').addEventListener('click', function(event) {
 			document.body.style.fontFamily = "verdana";
 			//document.getElementById("changeTextFont").src = "./js-assignment.js";
-		}
-	);
+	}
 
-};
+	);
+}
+
+
 
 //Shuffling around words
 function shufflize() {
 	var txt = document.getElementById("shuffleWords").textContent;
-	var words = txt.split("");
+	var words = txt.split(" ");
 	words.map(function(t) {
 		for(i = (words.length - 1); i > 0; i--) {
 			var j = Math.floor(Math.random() * (i + 1));
