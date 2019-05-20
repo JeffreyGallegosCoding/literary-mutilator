@@ -26,13 +26,14 @@ function messWithWordFont() {
 
 
 //Shuffling around words
+//Do not use var anymore it is an outdated version - use const or let
 function shufflize() {
-	var txt = document.getElementById("shuffleWords").textContent;
-	var words = txt.split(" ");
+	const txt = document.getElementById("shuffleWords").textContent;
+	const words = txt.split(" ");
 	words.map(function(t) {
 		for(i = (words.length - 1); i > 0; i--) {
-			var j = Math.floor(Math.random() * (i + 1));
-			var temp = words[i];
+			const j = Math.floor(Math.random() * (i + 1));
+			const temp = words[i];
 			words[i] = words[j];
 			words[j] = temp;
 		}
